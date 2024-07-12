@@ -91,11 +91,6 @@ export default function Blog({ params }) {
       <h2 className="text-2xl tracking-tighter">
         {post.metadata.title}
       </h2>
-      <div className="flex justify-between items-center mt-2 mb-8 text-sm">
-        <p className="text-sm text-neutral-600 dark:text-neutral-400">
-          {formatDate(post.metadata.publishedAt)}
-        </p>
-      </div>
       <article className="prose">
         <CustomMDX source={post.content} />
       </article>
