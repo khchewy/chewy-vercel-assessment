@@ -25,9 +25,6 @@ export function BlogPosts() {
               <p className="text-neutral-600 dark:text-neutral-400 w-[250px] tabular-nums">
                 {post.metadata.question}
               </p>
-              <p className="text-neutral-900 dark:text-neutral-100 tracking-tight">
-                {post.metadata.title}
-              </p>
             </div>
           </Link>
         ))}
