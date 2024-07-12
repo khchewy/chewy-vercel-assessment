@@ -19,6 +19,7 @@ export function generateMetadata({ params }) {
 
   let {
     title,
+    question,
     publishedAt: publishedTime,
     summary: description,
     image,
@@ -32,6 +33,7 @@ export function generateMetadata({ params }) {
     description,
     openGraph: {
       title,
+      question,
       description,
       type: 'article',
       publishedTime,
