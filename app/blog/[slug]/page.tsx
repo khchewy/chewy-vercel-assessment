@@ -37,7 +37,7 @@ export function generateMetadata({ params }) {
       description,
       type: 'article',
       publishedTime,
-      url: `${baseUrl}/question/${post.slug}`,
+      url: `${baseUrl}/questions/${post.slug}`,
       images: [
         {
           url: ogImage,
@@ -77,7 +77,7 @@ export default function Blog({ params }) {
             image: post.metadata.image
               ? `${baseUrl}${post.metadata.image}`
               : `/og?title=${encodeURIComponent(post.metadata.title)}`,
-            url: `${baseUrl}/question/${post.slug}`,
+            url: `${baseUrl}/questions/${post.slug}`,
             author: {
               '@type': 'Chewy',
               name: 'Vercel Technical Assessment',
