@@ -1,0 +1,14 @@
+---
+title: 'Describe how you solved a challenge or technical issue that you faced in a previous role (preferably in a previous support role). How did you determine that your solution was successful?'
+question: 'Question 3'
+publishedAt: '2024-04-09'
+summary: 'Test'
+---
+
+As a Support Engineer at Fullstory, we commonly troubleshoot rendering issues in session replay; where the customer’s site fails to render correctly (or consistently) in captured sessions in the platform. Due to the nature of these issues, it’s paramount for us that we resolve these issues or identify a root cause as soon as possible, as the misrepresentation of the customer site can make it more difficult to identify site issues that are truly occurring and erode trust in Fullstory.
+
+While rendering issues are typically caused by CSS resources or other assets being unavailable to our fetcher; usually due to authentication issues or our fetcher being blocked, the cause can sometimes be a bit more difficult to determine. Recently, I handled a ticket where the customer was running into sporadic rendering issues that only occurred while they had their website open.
+
+After investigating and ruling out possible issues with our fetcher retrieving their assets, I looped in our engineering team for further investigation, relaying further troubleshooting steps to the customer and passing their findings back to our engineers. Ultimately, we determined that there was actually an issue with “fallback mode”; our backup plan for fetching site resources from the user’s browser cache, resulting in rendering issues that were only visible when this feature was active.
+
+Once our engineers had confirmed that a fix had been released, I verified that the rendering issue was no longer occurring by capturing a test session and triggering “fallback mode” to prompt Fullstory to attempt to retrieve the customer’s resources from my browser cache. Upon confirming that the issue was no longer occurring, I happily informed the customer that they were good to go.
