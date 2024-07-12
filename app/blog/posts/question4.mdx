@@ -1,0 +1,16 @@
+---
+title: 'When would you choose to use Edge Functions, Serverless Functions, or Edge Middleware with Vercel?'
+question: 'Question 4'
+publishedAt: '2024-04-09'
+summary: 'Test'
+---
+
+Edge Functions, Serverless Functions, and Edge Middleware are three supported functions with Vercel.
+
+Edge Functions are powered by the Edge runtime and are executed close to end-users since they’re deployed global-first across the Edge Network. They’re lightweight, cost-effective functions with a low response time for end-users, but are more limited in functionality since only a subset of browser and Node.js APIs are exposed.
+
+Serverless Functions are powered by Node.js (and also offer beta support for Go, Python, and Ruby) and offer more computing power with full Node.js compatibility but may take longer to boot than functions using the Edge runtime, since they are deployed as region-first.
+
+Edge Middleware are powered by the Edge runtime and execute before a request is processed on the site, allowing the response to be modified. Since it runs before the cache, Middleware enables effective personalisation of static content but does not have access to all browser and Node.js APIs.
+
+Due to its full Node.js compatibility and greater compute power, Serverless Functions should be used for more strenuous operations as well as functions that require APIs not supported by the Edge runtime. Edge Functions are appropriate for lightweight functions that are time-sensitive for the end-user and are limited to its supported APIs, and Edge Middleware should be used for personalisation and other high speed operations. It’s important to note that neither Edge Functions nor Edge Middleware can be used for dynamic code execution.

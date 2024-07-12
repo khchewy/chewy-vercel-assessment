@@ -19,6 +19,7 @@ export function generateMetadata({ params }) {
 
   let {
     title,
+    question,
     publishedAt: publishedTime,
     summary: description,
     image,
@@ -32,6 +33,7 @@ export function generateMetadata({ params }) {
     description,
     openGraph: {
       title,
+      question,
       description,
       type: 'article',
       publishedTime,
@@ -68,6 +70,7 @@ export default function Blog({ params }) {
             '@context': 'https://schema.org',
             '@type': 'BlogPosting',
             headline: post.metadata.title,
+            question: post.metadata.question,
             datePublished: post.metadata.publishedAt,
             dateModified: post.metadata.publishedAt,
             description: post.metadata.summary,
@@ -76,20 +79,18 @@ export default function Blog({ params }) {
               : `/og?title=${encodeURIComponent(post.metadata.title)}`,
             url: `${baseUrl}/blog/${post.slug}`,
             author: {
-              '@type': 'Person',
-              name: 'My Portfolio',
+              '@type': 'Chewy',
+              name: 'Vercel Technical Assessment',
             },
           }),
         }}
       />
       <h1 className="title font-semibold text-2xl tracking-tighter">
-        {post.metadata.title}
+        {post.metadata.question}
       </h1>
-      <div className="flex justify-between items-center mt-2 mb-8 text-sm">
-        <p className="text-sm text-neutral-600 dark:text-neutral-400">
-          {formatDate(post.metadata.publishedAt)}
-        </p>
-      </div>
+      <h2 className="text-2xl tracking-tighter">
+        {post.metadata.title}
+      </h2>
       <article className="prose">
         <CustomMDX source={post.content} />
       </article>
