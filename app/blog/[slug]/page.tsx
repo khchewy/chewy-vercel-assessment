@@ -85,10 +85,10 @@ export default function Blog({ params }) {
           }),
         }}
       />
-      <h1 className="title font-bold text-2xl tracking-tighter">
+      <h1 className="title font-semibold text-2xl tracking-tighter">
         {post.metadata.question}
       </h1>
-      <h2 className="font-semibold text-2xl tracking-tighter">
+      <h2 className="text-2xl tracking-tighter">
         {post.metadata.title}
       </h2>
       <div className="flex justify-between items-center mt-2 mb-8 text-sm">
