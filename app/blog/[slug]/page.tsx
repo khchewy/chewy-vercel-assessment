@@ -79,14 +79,16 @@ export default function Blog({ params }) {
               : `/og?title=${encodeURIComponent(post.metadata.title)}`,
             url: `${baseUrl}/blog/${post.slug}`,
             author: {
-              '@type': 'Person',
-              name: 'My Portfolio',
+              '@type': 'Chewy',
+              name: 'Vercel Technical Assessment',
             },
           }),
         }}
       />
       <h1 className="title font-semibold text-2xl tracking-tighter">
-        {post.metadata.question} {post.metadata.title}
+        {post.metadata.question}
+        
+        {post.metadata.title}
       </h1>
       <div className="flex justify-between items-center mt-2 mb-8 text-sm">
         <p className="text-sm text-neutral-600 dark:text-neutral-400">
